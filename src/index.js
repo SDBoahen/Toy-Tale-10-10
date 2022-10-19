@@ -42,6 +42,7 @@ fetch( "http://localhost:3000/toys" )
   const arrayOfToyObjects = someData
 
 
+  // Handled Appending the Cards
   arrayOfToyObjects.map(  
     
     ( eachToyObject )=>{
@@ -84,6 +85,27 @@ fetch( "http://localhost:3000/toys" )
     }
 
   )
+
+
+
+  // Handle Our Form
+  const formForNewToy = document.querySelector( ".add-toy-form" )
+        formForNewToy.addEventListener(  "submit" , ( eventObject )=>{
+
+          eventObject.preventDefault( )
+
+          // console.log( "eventObject" , eventObject ) 
+          // console.log( "eventObject.target" , eventObject.target ) // == formForNewToy
+
+
+          // console.log( "eventObject.target.name" , eventObject.target.name )
+          console.log( "eventObject.target.name.value" , eventObject.target.name.value )
+          
+          // console.log( "eventObject.target.image" , eventObject.target.image )
+          console.log( "eventObject.target.image.value" , eventObject.target.image.value )
+          
+
+        }  )
 
 
 
